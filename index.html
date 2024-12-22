@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- Início do Head -->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Trabalho de Análise de Requisitos - UDF, 2024" />
+        <meta name="author" content="Douglas Silva Moura" />
+        <title>System Dragons</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    </head>
+    <!-- Fim do Head -->
+
+    <!-- Início do corpo da Página -->
+    <body class="barra-de-navegacao-fixa">
+        <!-- Barra de Navegação -->
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Logo do Sistema -->
+            <a class="navbar-brand ps-3" href="index.html">
+                <img id="logoDaPagina" src="assets/img/logo_sistema.png" alt="Logo Do Sistema">
+            </a>
+            <!-- Alternar barra lateral -->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Barra de Pesquisa -->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Pesquisar por..." aria-label="Pesquisar por..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Itens de Sistema -->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Configurações</a></li>
+                        <li><a class="dropdown-item" href="#!">Registro de Atividades</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="login.html">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Nav Lateral -->
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Gráficos</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                Dashboard
+                            </a>
+
+                            <!-- Início da Barra Lateral -->
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-columns"></i>
+                                </div>
+                                <!-- CADASTRO -->
+                                Gerenciamento
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="registrar.html">Cadastrar Novo Segurança </a>
+                                    <a class="nav-link" href="tables.html">Gerenciar Escalas</a>
+                                    <a class="nav-link" href="">Cadastrar novo Treinamento</a>
+                                    <a class="nav-link" href=""> Apontar Segurança para Treinamento</a>
+                                    <a class="nav-link" href=""> Registro de Treinamento</a>
+                                    <a class="nav-link" href="charts.html"> Gestão de Eventos Ativos </a>
+                                </nav>
+                            </div>
+
+                                <!-- ESTOQUE -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                Estoque 
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                            <!-- Autenticação -->
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Controle de Equipamentos
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+
+                                    <!-- Campos da Autenticação -->
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html"> Relatório de Equipamentos</a>
+                                        </nav>
+                                    </div>
+
+                                    <!-- TELAS DE ERRO -->
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Erro
+                                        <div class="sb-sidenav-collapse-arrow">
+                                            <i class="fas fa-angle-down"></i>
+                                        </div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="401.html">Erro 401</a>
+                                            <a class="nav-link" href="404.html">Erro 404</a>
+                                            <a class="nav-link" href="500.html">Erro 500</a>
+                                        </nav>
+                                    </div>
+                                </nav>
+                            </div>
+
+
+                            <!-- Financeiro -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsFaturamento" aria-expanded="false" aria-controls="collapseLayoutsFaturamento">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-columns"></i>
+                                </div>
+                                Relatório
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <div class="collapse" id="collapseLayoutsFaturamento" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="charts.html">Relatório </a>
+                                </nav>
+                            </div>
+
+
+                            <!-- FISCAL -->
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsFiscal" aria-expanded="false" aria-controls="collapseLayoutsFiscal">
+                                <div class="sb-nav-link-icon">
+                                    <i class="fas fa-columns"></i>
+                                </div>
+                                Ponto Online
+                                <div class="sb-sidenav-collapse-arrow">
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </a>
+                            <div class="collapse" id="collapseLayoutsFiscal" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="">Registro de Ponto Online </a>
+                                </nav>
+                            </div>
+
+
+                            <!-- 3° Base de Itens -->
+                            <div class="sb-sidenav-menu-heading">Atalhos</div>
+                            <a class="nav-link" href="charts.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                Gráficos
+                            </a>
+                            <a class="nav-link" href="tables.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Tabelas
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Usuário Logado:</div>
+                        <b style="color: rgb(255, 255, 255)"> Fulaninho da Silva </b>
+                    </div>
+                </nav>
+            </div>
+            <!-- FIM DA BARRA LATERAL E BARRA SUPERIOR (NAV)-->
+
+
+            <div id="layoutSidenav_content">
+            
+                <!-- CORPO DA PÁGINA EM SI-->
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Gráficos e Tabelas</li>
+                        </ol>
+
+                        <!-- ATALHOS DOS CARTOES -->
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body"><b>Eventos em aberto</b></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver Detalhes</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body"><b>Eventos em andamento</b></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver Detalhes</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body"><b>Eventos Concluídos</b></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver Detalhes</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body"><b>Eventos Não-Concluídos</b></div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">Ver Detalhes</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area me-1"></i>
+                                        <b>Andamento dos eventos em Produção:</b>
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        <b>Balanço Anual da Empresa</b>
+                                    </div>
+                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                <b>Funcionários Ativos:</b>
+                            </div>
+
+                            <!-- Início da tabela: Definição de  -->
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Posição</th>
+                                            <th>Cidade</th>
+                                            <th>Idade</th>
+                                            <th>Data de início</th>
+                                            <th>Salário (Anual)</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Posição</th>
+                                            <th>Setor</th>
+                                            <th>Idade</th>
+                                            <th>Data de início</th>
+                                            <th>Salário</th>
+                                        </tr>
+                                    </tfoot>
+
+                                    <!-- Início das pessoas da Tabela -->
+                                    <tbody>
+                                        <tr><td>Lucas Ferreira</td><td>Administrador de Redes</td><td>Salvador</td><td>30</td><td>2014/06/22</td><td>R$ 9.500,00</td></tr>
+                                        <tr><td>Mariana Sousa</td><td>Coordenadora de Marketing</td><td>Porto Alegre</td><td>27</td><td>2019/08/30</td><td>R$ 13.000,00</td></tr>
+                                        <tr><td>Ricardo Lopes</td><td>Engenheiro Civil</td><td>São Luís</td><td>45</td><td>2009/01/10</td><td>R$ 16.300,00</td></tr>
+                                        <tr><td>Fernanda Azevedo</td><td>Analista de Recursos Humanos</td><td>Goiânia</td><td>29</td><td>2021/04/19</td><td>R$ 6.800,00</td></tr>
+                                        <tr><td>Roberto Faria</td><td>Consultor de Vendas</td><td>Manaus</td><td>36</td><td>2012/07/14</td><td>R$ 11.500,00</td></tr>
+                                        <tr><td>Sandra Martins</td><td>Supervisora de Logística</td><td>Recife</td><td>39</td><td>2013/02/11</td><td>R$ 10.400,00</td></tr>
+                                        <tr><td>André Neves</td><td>Analista de SEO</td><td>Niterói</td><td>31</td><td>2016/10/09</td><td>R$ 7.200,00</td></tr>
+                                        <tr><td>Patrícia Moreira</td><td>Desenvolvedora Back-End</td><td>Vitória</td><td>33</td><td>2017/05/07</td><td>R$ 10.800,00</td></tr>
+                                        <tr><td>Diego Nascimento</td><td>Arquiteto de Soluções</td><td>Florianópolis</td><td>40</td><td>2010/09/24</td><td>R$ 14.000,00</td></tr>
+                                        <tr><td>Rafaela Barros</td><td>Especialista em SEO</td><td>Cuiabá</td><td>32</td><td>2020/11/03</td><td>R$ 8.700,00</td></tr>
+                                        <tr><td>Vinícius Teixeira</td><td>Redator</td><td>Santos</td><td>25</td><td>2022/03/21</td><td>R$ 5.200,00</td></tr>
+                                        <tr><td>Camila Ribeiro</td><td>Gerente de Produto</td><td>João Pessoa</td><td>43</td><td>2015/08/13</td><td>R$ 14.700,00</td></tr>
+                                        <tr><td>Eduardo Gonçalves</td><td>Designer UX/UI</td><td>Campinas</td><td>35</td><td>2018/04/01</td><td>R$ 9.600,00</td></tr>
+                                        <tr><td>Daniela Pires</td><td>Coordenadora de Projetos</td><td>Ribeirão Preto</td><td>38</td><td>2013/07/17</td><td>R$ 13.300,00</td></tr>
+                                        <tr><td>Gustavo Almeida</td><td>Analista de BI</td><td>Sorocaba</td><td>26</td><td>2021/12/12</td><td>R$ 6.900,00</td></tr>
+                                        <tr><td>Fabiana Oliveira</td><td>Especialista em Redes Sociais</td><td>Fortaleza</td><td>34</td><td>2017/10/16</td><td>R$ 8.200,00</td></tr>
+                                        <tr><td>Leandro Mendes</td><td>Desenvolvedor Full-Stack</td><td>Jundiaí</td><td>28</td><td>2019/02/23</td><td>R$ 12.300,00</td></tr>
+                                        <tr><td>Aline Castro</td><td>Arquiteta</td><td>Aracaju</td><td>41</td><td>2012/03/04</td><td>R$ 15.000,00</td></tr>
+                                        <tr><td>Bruno Carvalho</td><td>Consultor de RH</td><td>Salvador</td><td>33</td><td>2016/09/08</td><td>R$ 9.100,00</td></tr>
+                                        <tr><td>Isabela Campos</td><td>Gestora de Conteúdo</td><td>Campo Grande</td><td>27</td><td>2018/06/26</td><td>R$ 7.500,00</td></tr>
+                                        <tr><td>Fábio Correia</td><td>Analista de Sistemas</td><td>Teresina</td><td>42</td><td>2011/05/30</td><td>R$ 10.700,00</td></tr>
+                                        <tr><td>Lúcia Mendes</td><td>Consultora de Marketing</td><td>Natal</td><td>36</td><td>2015/01/22</td><td>R$ 9.900,00</td></tr>
+                                        <tr><td>Henrique Rocha</td><td>Engenheiro de Produção</td><td>Bauru</td><td>47</td><td>2008/12/18</td><td>R$ 17.500,00</td></tr>
+                                        <tr><td>Priscila Farias</td><td>Redatora</td><td>Santos</td><td>24</td><td>2021/07/10</td><td>R$ 5.800,00</td></tr>
+                                        <tr><td>Rodrigo Andrade</td><td>Desenvolvedor Mobile</td><td>Caxias do Sul</td><td>29</td><td>2019/05/29</td><td>R$ 11.400,00</td></tr>
+                                        <tr><td>Sabrina Rezende</td><td>Especialista em Marketing Digital</td><td>Petrolina</td><td>37</td><td>2014/11/01</td><td>R$ 12.000,00</td></tr>
+                                        <tr><td>Felipe Braga</td><td>Engenheiro Ambiental</td><td>Maceió</td><td>40</td><td>2010/02/14</td><td>R$ 14.200,00</td></tr>
+                                        <tr><td>Ana Paula Cunha</td><td>Analista de Qualidade</td><td>Blumenau</td><td>31</td><td>2017/06/03</td><td>R$ 8.400,00</td></tr>
+                                        <tr><td>Matheus Gomes</td><td>Especialista em Segurança da Informação</td><td>Recife</td><td>33</td><td>2016/08/19</td><td>R$ 10.100,00</td></tr>
+                                        <tr><td>Bianca Almeida</td><td>Coordenadora de RH</td><td>Goiânia</td><td>38</td><td>2015/03/13</td><td>R$ 13.200,00</td></tr>
+                                        <tr><td>Douglas Pereira</td><td>Desenvolvedor de Sistemas</td><td>Osasco</td><td>35</td><td>2018/09/30</td><td>R$ 9.300,00</td></tr>
+                                        <tr><td>Renata Carvalho</td><td>Gerente Comercial</td><td>Franca</td><td>46</td><td>2007/10/15</td><td>R$ 17.100,00</td></tr>
+                                        <tr><td>Cláudio Batista</td><td>Contador</td><td>São Paulo</td><td>48</td><td>2006/06/05</td><td>R$ 16.800,00</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <!-- Rodapé da Página -->
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Site Analise de Requisitos - 2024 (UDF)</div>
+                            <div>
+                                <a href="#">Termos de Política</a>
+                                &middot;
+                                <a href="#">Termos &amp; Condições</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

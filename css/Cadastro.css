@@ -1,0 +1,139 @@
+body {
+   background: linear-gradient(135deg, #000000, #8a0a0a);
+   color: white;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   display: grid;
+   grid-template-columns: 66% 34%;
+   height: 100vh;
+   justify-items: center;
+   align-items: center;
+   text-align: center;
+   overflow: hidden;
+}
+
+.logo-container {
+   grid-column: 1 / 2; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h2 {
+   font-family: Cambria;
+   font-size: 35px;
+   font-weight: 600;
+}
+
+.logo {
+   width: 750px;
+   height: auto;
+   animation: flutuar 3s ease-in-out infinite;
+   border-radius: 50%;
+}
+
+.infoLogin {
+   font-family: Cambria;
+   font-size: 20px;
+   width: auto;
+}
+
+.botaoEsqueceuSenha {
+   text-align: center;
+   text-decoration: none;
+   display: block;
+   color: rgb(255, 0, 0);
+   margin-bottom: 20px;
+}
+
+.register-form {
+   grid-column: 2 / 3; 
+   background: linear-gradient(135deg, #000000, #8a0a0a1a); 
+   padding: 40px;
+   border-radius: 15px;
+   width: 400px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   margin: 0;
+   height: 100%; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center; 
+}
+
+.Cadastro{
+   font-family: Cambria;
+   text-decoration: none;
+   color: aliceblue;
+   font-size: medium;
+}
+
+input {
+   width: 95%;
+   padding: 20px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 10px; 
+   background-color: rgba(0, 0, 0, 0.5);
+   color: white;
+   text-align: left;
+   font-size: 15px;
+}
+
+button {
+   width: 80%;
+   padding: 10px;
+   background-color: #de0000;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center; 
+   margin: 100px 10px; 
+}
+
+.entrar {
+   text-decoration: none;
+   width: 80%;
+   height: auto;
+   font-size: large;
+   font-weight: 300;
+   padding: auto;
+   background-color: #de0000;
+   color: white;
+   border: none;
+   border-radius: 80px;
+   cursor: pointer;
+   text-align: center; 
+}
+
+.Registrar {
+   text-decoration: none;
+   width: 100px;
+   height: auto;
+   padding: 15px;
+   color: rgb(255, 0, 0);
+   background-color: #000000;
+   border: none;
+   border-radius: 80px;
+   cursor: pointer;
+   text-align: center; 
+}
+
+.entrar:hover {
+   background-color: #750303;
+}
+
+/* Definição da animação */
+@keyframes flutuar {
+   0% {
+      transform: translateY(0); /* Posição inicial */
+   }
+   50% {
+      transform: translateY(-15px); /* Subir 15px no meio da animação */
+   }
+   100% {
+      transform: translateY(0); /* Voltar à posição inicial */
+   }
+}
